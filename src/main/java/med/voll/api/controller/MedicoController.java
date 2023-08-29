@@ -22,7 +22,8 @@ public class MedicoController {
 
     @PostMapping
     @Transactional
-    public ResponseEntity<DadosDetalhamentoMedico> cadastrar(@RequestBody @Valid DadosCadastroMedico dados,
+    public ResponseEntity<DadosDetalhamentoMedico> cadastrar(
+            @RequestBody @Valid DadosCadastroMedico dados,
                                           UriComponentsBuilder uriBuilder) { // @Valid realizar validations
        var medico =  new Medico(dados);
 
